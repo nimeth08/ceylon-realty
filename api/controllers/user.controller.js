@@ -4,7 +4,7 @@ import { errorHandler } from "../utils/error.js";
 
 export const test = (req, res) => {
   res.json({
-    message: "API Route is working!",
+    message: "Api route is working!",
   });
 };
 
@@ -31,7 +31,7 @@ export const updateUser = async (req, res, next) => {
 
     const { password, ...rest } = updatedUser._doc;
 
-    res.status(200).json({ rest });
+    res.status(200).json(rest);
   } catch (error) {
     next(error);
   }
